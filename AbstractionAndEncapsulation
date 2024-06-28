@@ -1,0 +1,49 @@
+ABSTRACTION
+==============
+Hidding Implimentation of an application and showing on Functionality to end user.
+
+Steps to achieve Abstraction:
+-----------------------------
+1.Define Abstract Class/Interface with abstract methods.
+2.Impliment Abstract methods in sub class/implimentation class.
+3.Create Abstract type/interface type refernce variable.
+4.Assign sub class object to the reference.
+
+Abstract class and Interface:
+===========================
+1) Abstract class can have abstract and non-abstract methods.	                                            Interface can have only abstract methods. Since Java 8, it can have default and static methods also.
+2) Abstract class doesn't support multiple inheritance.                        	                          Interface supports multiple inheritance.
+3) Abstract class can have final, non-final, static and non-static variables.	                            Interface has only static and final variables.
+4) Abstract class can provide the implementation of interface.	                                          Interface can't provide the implementation of abstract class.
+5) The abstract keyword is used to declare abstract class.	                                              The interface keyword is used to declare interface.
+6) An abstract class can extend another Java class and implement multiple Java interfaces.	              An interface can extend another Java interface only.
+7) An abstract class can be extended using keyword "extends".                                            	An interface can be implemented using keyword "implements".
+8) A Java abstract class can have class members like private, protected, etc.                           	Members of a Java interface are public by default.
+9) An abstract class can have constructor  but can't create object.                                       Interface can't have any constructor or  create any objects.
+10)Example:                                                                                               Example: 
+public abstract class Shape{                                                                              public interface Drawable{
+public abstract void draw();                                                                              void draw();
+}	                                                                                                        }
+
+Encapsulation:
+===============
+A proccess of binding data and functionalities into a single unit and protecting them through Access Specifiers.
+
+JavaBean class:
+----------------
+1.Class must be public
+2.Constructor must be public
+3.States or variables must be private
+4.public getter methods(public int getID(){return ID;})
+5.public setter methods(public void setID(int ID){this.ID=ID;})
+
+Access Specifiers :
+----------------------
+They provide access restrictions to acknowledge application's security
+
+Access Specifiers | Within Class | OutsideClass within Package | Outside Package
+==================================================================================
+Private           |    YES       |              NO             |        NO
+Default           |    YES       |             YES             |        NO
+Protected         |    YES       |             YES             | Only using Inheritance
+Public            |    YES       |             YES             |       YES
